@@ -16,40 +16,6 @@
 
 package okio
 
-import kotlin.annotation.AnnotationTarget.FIELD
-import kotlin.annotation.AnnotationTarget.FILE
-import kotlin.annotation.AnnotationTarget.FUNCTION
+fun main(args: Array<String>) {
 
-// TODO make internal https://youtrack.jetbrains.com/issue/KT-19664
-// TODO or remove after https://youtrack.jetbrains.com/issue/KT-18882
-@Target(FUNCTION)
-expect annotation class JvmOverloads()
-
-// TODO make internal https://youtrack.jetbrains.com/issue/KT-19664
-// TODO or remove after https://youtrack.jetbrains.com/issue/KT-18882
-@Target(FIELD)
-expect annotation class JvmField()
-
-// TODO make internal https://youtrack.jetbrains.com/issue/KT-19664
-// TODO or remove after https://youtrack.jetbrains.com/issue/KT-18882
-@Target(FUNCTION)
-expect annotation class JvmStatic()
-
-// TODO make internal https://youtrack.jetbrains.com/issue/KT-19664
-// TODO or remove after https://youtrack.jetbrains.com/issue/KT-18882
-@Target(FILE, FUNCTION)
-expect annotation class JvmName(val name: String)
-
-internal expect fun arraycopy(
-  src: ByteArray,
-  srcPos: Int,
-  dest: ByteArray,
-  destPos: Int,
-  length: Int
-)
-
-// TODO make internal https://youtrack.jetbrains.com/issue/KT-19664
-expect open class IndexOutOfBoundsException(message: String) : RuntimeException
-
-// TODO make internal https://youtrack.jetbrains.com/issue/KT-19664
-expect class ArrayIndexOutOfBoundsException(message: String) : IndexOutOfBoundsException
+}

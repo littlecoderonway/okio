@@ -50,6 +50,7 @@ dependencies {
 
   expectedBy project(':okio')
 
+  compile "com.squareup.okio:okio:1.14.0"
   implementation deps.kotlin.stdLib.jdk6
   compileOnly deps.animalSniffer.annotations
   compileOnly deps.jsr305
@@ -64,6 +65,7 @@ dependencies {
 
   jmh deps.jmh.core
   jmh deps.jmh.generator
+  jmh "com.squareup.okio:okio:1.14.0"
 }
 
 task japicmp(type: me.champeau.gradle.japicmp.JapicmpTask, dependsOn: 'jar') {

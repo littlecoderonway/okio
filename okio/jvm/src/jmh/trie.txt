@@ -1,0 +1,13 @@
+SelectBenchmark.select                             4           2048  sample  133639   ± 0.477  us/op
+SelectBenchmark.select                             8           2048  sample  104819   ± 0.448  us/op
+SelectBenchmark.select                            16           2048  sample   61315   ± 0.742  us/op
+SelectBenchmark.select                            32           2048  sample   44557   ± 1.067  us/op
+SelectBenchmark.select                            64           2048  sample   24561   ± 2.457  us/op
+
+
+option count     1.14       2.0
+4              74.731    73.638
+8              95.320   121.352
+16            162.929   203.177
+32            224.367   322.995
+64            406.674   614.689

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Square, Inc.
+ * Copyright (C) 2014 Square, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,21 +15,20 @@
  */
 package okio
 
-import kotlin.test.assertEquals
-import org.junit.Test
+import java.io.Closeable
+import java.io.EOFException
+import java.io.IOException
+import java.io.InputStream
+import java.io.OutputStream
+import java.nio.ByteBuffer
+import java.nio.channels.ByteChannel
+import java.nio.charset.Charset
+import java.security.InvalidKeyException
+import java.security.MessageDigest
+import java.util.ArrayList
+import javax.crypto.Mac
+import javax.crypto.spec.SecretKeySpec
 
-class PipeKotlinTest {
-  @Test fun test() {
-    val pipe = Pipe(6)
-    pipe.sink.write(Buffer().writeUtf8("abc"), 3L)
+fun main(args: Array<String>) {
 
-    val readBuffer = Buffer()
-    assertEquals(3L, pipe.source.read(readBuffer, 6L))
-    assertEquals("abc", readBuffer.readUtf8())
-
-    pipe.sink.close()
-    assertEquals(-1L, pipe.source.read(readBuffer, 6L))
-
-    pipe.source.close()
-  }
 }
